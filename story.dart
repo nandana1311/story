@@ -1,20 +1,33 @@
 import 'dart:io';
 
-void main() {
-  print("\n✨ Biodata Generator (Generating HTML) ✨\n");
- 
-  String name =stdin.readLineSync("Enter your Full Name") ?? "";
+void main() 
+{
+  print("Enter your name:");
+  String name = stdin.readLineSync() ?? "";
 
-  String age = stdin.readLineSync("Enter your Age") ?? "";
-  String email = stdin.readLineSync("Enter your Email Address") ?? "";
-  String phone =stdin.readLineSync("Enter your Phone Number") ?? "";
-  String address = stdin.readLineSync("Enter your Current Address") ?? "";
-  String education = stdin.readLineSync("Enter your Highest Education") ?? "";
-  String occupation = stdin.readLineSync("Enter your Occupation") ?? "";
-  String hobbies =stdin.readLineSync("Enter your Hobbies (separate with commas)") ?? "";
-  String skills = stdin.readLineSync("Enter your Skills (separate with commas)") ?? "";
+  print("Enter your phone number:");
+  String phone = stdin.readLineSync() ?? "";
+
+  print("Enter your age:");
+  String ageInput = stdin.readLineSync() ?? "";
+  int age = int.tryParse(ageInput) ?? 0;
+
+  print("Enter your height (in cm):");
+  String heightInput = stdin.readLineSync() ?? "";
+  double height = double.tryParse(heightInput) ?? 0.0;
+
+  print("Enter your weight (in kg):");
+  String weightInput = stdin.readLineSync() ?? "";
+  double weight = double.tryParse(weightInput) ?? 0.0; 
+  print("Enter your address:");
+  String address = stdin.readLineSync() ?? "";
+
+  print("Enter your hobbies (comma-separated):");
+  String hobbiesInput = stdin.readLineSync() ?? "";
   List<String> hobbies = hobbiesInput.split(',').map((h) => h.trim()).toList();
 
+
+ 
   print("\nBiodata:");
   print("Name: $name");
   print("Phone: $phone");
