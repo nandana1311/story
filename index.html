@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Biodata</title>
+      <style>
+          body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
+          .biodata-container { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+          h2 { color: #333; border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 15px; }
+          p { margin-bottom: 10px; }
+          .section-title { font-weight: bold; margin-top: 15px; color: #555; }
+      </style>
+  </head>
+  <body>
+      <div class="biodata-container">
+          <h2>Personal Biodata</h2>
+          <p><strong>Name:</strong> $name</p>
+          <p><strong>Age:</strong> $age</p>
+          <p><strong>Email:</strong> $email</p>
+          <p><strong>Phone:</strong> $phone</p>
+          <p><strong>Address:</strong> $address</p>
+
+          <h2 class="section-title">Education & Profession</h2>
+          <p><strong>Education:</strong> $education</p>
+          <p><strong>Occupation:</strong> $occupation</p>
+
+          <h2 class="section-title">Interests & Abilities</h2>
+          <p><strong>Hobbies:</strong> ${hobbies.split(',').map((h) => h.trim()).join(', ')}</p>
+          <p><strong>Skills:</strong> ${skills.split(',').map((s) => s.trim()).join(', ')}</p>
+      </div>
+  </body>
+  </html>
+  
+
+  
