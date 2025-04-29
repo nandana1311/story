@@ -2,29 +2,25 @@ import 'dart:io';
 
 void main() {
   print("\n✨ Biodata Generator (Generating HTML) ✨\n");
-
-
-  String getInput(String prompt) {
-    stdout.write('$prompt: ');
-    return stdin.readLineSync() ?? '';
-  }
-
  
-  String name = getInput("Enter your Full Name");
-  String age = getInput("Enter your Age");
-  String email = getInput("Enter your Email Address");
-  String phone = getInput("Enter your Phone Number");
-  String address = getInput("Enter your Current Address");
-  String education = getInput("Enter your Highest Education");
-  String occupation = getInput("Enter your Occupation");
-  String hobbies = getInput("Enter your Hobbies (separate with commas)");
-  String skills = getInput("Enter your Skills (separate with commas)");
+  String name =stdin.readLineSync("Enter your Full Name") ?? "";
 
-  String biodataHTML = """
+  String age = stdin.readLineSync("Enter your Age") ?? "";
+  String email = stdin.readLineSync("Enter your Email Address") ?? "";
+  String phone =stdin.readLineSync("Enter your Phone Number") ?? "";
+  String address = stdin.readLineSync("Enter your Current Address") ?? "";
+  String education = stdin.readLineSync("Enter your Highest Education") ?? "";
+  String occupation = stdin.readLineSync("Enter your Occupation") ?? "";
+  String hobbies =stdin.readLineSync("Enter your Hobbies (separate with commas)") ?? "";
+  String skills = stdin.readLineSync("Enter your Skills (separate with commas)") ?? "";
+  List<String> hobbies = hobbiesInput.split(',').map((h) => h.trim()).toList();
 
-  final file = File('index.html');
-  file.writeAsStringSync(biodataHTML);
-
-  print("\nBiodata HTML generated as 'index.html'.\n");
-  print("You can now host this 'index.html' file on GitHub Pages.");
+  print("\nBiodata:");
+  print("Name: $name");
+  print("Phone: $phone");
+  print("Age: $age years");
+  print("Height: $height cm");
+  print("Weight: $weight kg");
+  print("Address: $address");
+  print("Hobbies: ${hobbies.join(', ')}");
 }
